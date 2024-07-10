@@ -222,6 +222,11 @@ public static class Program
         {
             return false;
         }
+
+        if (index < 0 || index >= oldList.Count)
+        {
+            Console.WriteLine($"Invalid node index {index} found, mapping to -1.");
+        }
         
         FLVER.Node node = oldList[index];
         int newIndex = newList.IndexOf(node);
